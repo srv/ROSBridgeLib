@@ -196,7 +196,6 @@ using UnityEngine;
                 //Debug.Log ("Operation is " + op);
                 if ("publish".Equals (op)) {
 		 			string topic = node["topic"];
-                    Debug.Log ("Got a message on " + topic);
 		 			foreach(Type p in _subscribers) {
 		 				if(topic.Equals (GetMessageTopic (p))) {
                             //Debug.Log ("And will parse it " + GetMessageTopic (p));
@@ -248,7 +247,6 @@ using UnityEngine;
 		 			public void Publish(String topic, ROSBridgeMsg msg) {
 		 				if(_ws != null) {
 		 					string s = ROSBridgeMsg.Publish (topic, msg.ToYAMLString ());
-				//Debug.Log ("Sending " + s);
 		 					_ws.Send (s);
 		 				}
 		 			}
