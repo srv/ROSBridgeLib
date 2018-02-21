@@ -10,7 +10,7 @@ using ROSBridgeLib.auv_msgs;
 
 namespace ROSBridgeLib
 {
-    namespace nav_msgs
+    namespace auv_msgs
     {
         public class GoalDescriptorMsg : ROSBridgeMsg
         {
@@ -76,8 +76,9 @@ namespace ROSBridgeLib
 
             public override string ToYAMLString()
             {
-                return "{\"requester\" : " + _requester + ", \"id\" : " + _id + ", \"priority\" : " + _priority + "}";
+                return "{\"requester\": \"" + _requester + "\", \"id\": " + _id + ", \"priority\": " + _priority + "}";
             }
         }
     }
 }
+

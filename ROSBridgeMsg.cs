@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Text;
 using SimpleJSON;
-
+using UnityEngine;
 /**
  * This (mostly empty) class is the parent class for all RosBridgeMsg's (the actual message) from
  * ROS. As the message can be empty....
@@ -40,7 +40,7 @@ public class ROSBridgeMsg  {
 	}
 	
 	public static string Publish(string messageTopic, string message) {
-		return "{\"op\": \"publish\", \"topic\": \"" + messageTopic + "\", \"msg\": " + message + "}";
+        return "{\"op\": \"publish\", \"topic\": \"" + messageTopic + "\", \"msg\": " + message + "}";
 	}
 	
 	public static string Subscribe(string messageTopic) {

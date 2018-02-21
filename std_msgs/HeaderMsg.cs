@@ -55,8 +55,8 @@ namespace ROSBridgeLib {
 			}
 			
 			public override string ToYAMLString() {
-				return "{\"seq\" : " + _seq + ", \"stamp\" : " + _stamp.ToYAMLString () + ", frame_id=" + _frame_id + "}";
-			}
-		}
+				return "{\"seq\": " + _seq + ", \"stamp\": " + _stamp.ToYAMLString () + ", \"frame_id\": \" " + _frame_id + "\"}";
+            } // fbf 21/09/2017: be carefull , the original version of this ToYAMLString that appears in the github repository is incorrect. This is the correct form: ", \"frame_id\": \" " 
+        }
 	}
 }

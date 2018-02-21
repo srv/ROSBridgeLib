@@ -84,8 +84,8 @@ namespace ROSBridgeLib
 
             public override string ToYAMLString()
             {
-                return "{\"x\" : " + _x + ", \"y\" : " + _y + ", \"z\" : " + _z + ", \"roll\" : " + _roll + ", \"pitch\" = " + _pitch + ", \"yaw\" =" + _yaw + "}";
-            }
+                return "{\"x\" : \" " + _x + " \", \"y\" : \" " + _y + "\", \"z\" : \" " + _z + "\", \"roll\" : \" " + _roll + "\", \"pitch\" : \" " + _pitch + "\", \"yaw\" : \" " + _yaw + "\" }";
+            } //fbf 21/09/2017: be carefull. In the JSON message, the boolean variables must be between quotations, otherwise, the JSON server gives an error.
         }
     }
 }

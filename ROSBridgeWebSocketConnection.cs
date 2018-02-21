@@ -258,5 +258,12 @@ using UnityEngine;
 		 					_ws.Send (s);
 		 				}
 		 			}
-		 		}
-		 	}
+                    public void CallService(string service){ // added FBF 20/09/2017 include Callservice without parameters
+                        if (_ws != null){
+                            string s = ROSBridgeMsg.CallService(service);
+                                Debug.Log("Sending " + s);
+                                _ws.Send(s);
+                                }
+                    }
+    }
+}
